@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&family=Inter&family=Poppins&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: Poppins;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: black;
+    overflow: hidden;
+}
+.scroll-text{
+    color: white;
+    text-shadow: 4px 3px 3px rgba(0,0,0,0.81);
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.2px;
+}
+.scroll-container{
+    background-color: red;
+    font-size: large;
+    width: 100%;
+    height: 40px;
+}
