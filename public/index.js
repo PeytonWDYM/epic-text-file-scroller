@@ -7,6 +7,8 @@ let bufferText = ""
 
 let newText = ""
 
+let finished = false;
+
 function getAlertText() {
     fetch("text.txt")
     .then(response => {
@@ -26,8 +28,9 @@ function getAlertText() {
 getAlertText()
 
 
-function scrollTextg(){
+function scrollTextF(){
     scrollContainer.style.display = "block";
+    scrollCount = 0
     $(scrollText)
     .bind('finished', function() {
         if (scrollCount < 3) {
@@ -36,6 +39,7 @@ function scrollTextg(){
         } else {
             scrollContainer.style.display = "none"
             $(this).marquee('pause')
+            $(scrollText).unbind("finished");
             
         }
     })
@@ -46,7 +50,7 @@ function scrollTextg(){
 
 setTimeout(() => {
     scrollText.innerHTML = newText;
-    scrollTextg()
+    scrollTextF()
 }, 500)
 
 // repeating function to continuously get the current txt file
@@ -67,7 +71,7 @@ function loopGetTxt(){
                 newText = bufferText
                 scrollCount = 0
                 scrollText.innerHTML = newText;
-                scrollTextg()
+                scrollTextF()
             }
           })
           .catch(error => {
