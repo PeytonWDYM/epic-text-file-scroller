@@ -5,4 +5,3 @@
 ## 3. text.txt is the txt file that stores the text basically 
 
 
-### AS SEEN ON: ( [WCSG KCN](https://kodicable.net/player.html?stream=WCSG) ) 
